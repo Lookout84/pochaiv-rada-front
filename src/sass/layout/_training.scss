@@ -1,0 +1,245 @@
+.section.training {
+  /*margin-bottom: 50px;*/
+  background: $white-text-color;
+}
+
+.title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @include for-size(tablet-landscape) {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  @include for-size(desktop) {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+  }
+}
+
+.training-margin {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include for-size(tablet-landscape) {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+    text-align: start;
+  }
+}
+
+.training-list {
+  display: block;
+
+  @include for-size(tablet-landscape) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.training-item {
+  overflow: hidden;
+  word-break: break-word;
+
+  display: block;
+  width: 100%;
+  height: 280px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+  /*padding-right: 5px;
+  padding-left: 5px;*/
+  //padding-bottom: 22px;
+  background: $white-text-color;
+  box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1),
+    250ms background-color cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include for-size(tablet-landscape) {
+    width: calc((100% - 20px) / 2);
+    height: 284px;
+    padding-top: 40px;
+  }
+
+  @include for-size(desktop) {
+    width: calc((100% - 20px * 2) / 3);
+    height: 366px;
+    padding-top: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:hover .training-icon,
+  &:focus .training-icon {
+    fill: $white-text-color;
+  }
+
+  &:hover h3,
+  &:focus h3 {
+    color: $white-text-color;
+  }
+
+  &:hover p,
+  &:focus p {
+    color: $white-text-color;
+  }
+}
+
+.training-item:not(:last-child) {
+  margin-bottom: 15px;
+
+  @include for-size(tablet-landscape) {
+    margin-bottom: 0;
+  }
+}
+
+.training-item:nth-child(-n + 4) {
+  @include for-size(tablet-landscape) {
+    margin-bottom: 27px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.training-item:nth-child(2n + 1) {
+  @include for-size(tablet-landscape) {
+    margin-right: 20px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 0;
+  }
+}
+
+.training-item:not(:nth-child(3n)) {
+  @include for-size(desktop) {
+    margin-right: 20px;
+  }
+}
+
+.training-item:nth-child(-n + 3) {
+  @include for-size(desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+.training-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.training-icon {
+  display: inline-flex;
+  width: 45px;
+  height: 49px;
+  fill: $accent-color;
+  transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $white-text-color;
+  }
+}
+
+.hyphen {
+  display: block;
+  width: 165px;
+  //height: 32px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hyphen > p {
+  color: $accent-color;
+  margin: 0;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.training-item > h3 {
+  //font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: $main-text-color;
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  @include for-size(tablet-landscape) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include for-size(desktop) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+.training-item > p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: $secondary-text-color;
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  @include for-size(tablet-landscape) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include for-size(desktop) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}

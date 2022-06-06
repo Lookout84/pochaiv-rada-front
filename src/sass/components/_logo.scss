@@ -1,0 +1,64 @@
+.logo-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include for-size(mobile-only) {
+    margin-bottom: 4px;
+  }
+  @include for-size(tablet-landscape) {
+    margin-bottom: 5px;
+  }
+}
+.logo-hell,
+.logo-en {
+  @include for-size(mobile-only) {
+    font-size: 14px;
+  }
+  @include for-size(tablet-landscape) {
+    font-size: 26px;
+  }
+  font-weight: 800;
+  line-height: 1.23;
+  letter-spacing: 0.04em;
+}
+
+.logo-en {
+  text-transform: uppercase;
+}
+
+.icon-fire {
+  fill: $accent-color;
+
+  @include for-size(mobile-only) {
+    width: 15px;
+    height: 20px;
+  }
+  @include for-size(tablet-landscape) {
+    width: 22px;
+    height: 30px;
+  }
+}
+
+.logo-bottom-signature {
+  @include for-size(mobile-only) {
+    font-size: 5px;
+  }
+
+  @include for-size(tablet-landscape) {
+    font-size: 8px;
+  }
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.logo-color-accent {
+  @include for-size(tablet-landscape) {
+    color: $accent-color;
+  }
+}
+.logo .white {
+  color: white;
+}

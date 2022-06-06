@@ -1,0 +1,125 @@
+/*.section-guarantee {
+  background-color: $background-white-color;
+}
+
+.container-guarantee {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include for-size(tablet-landscape) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include for-size(desktop) {
+    padding-left: 183px;
+    padding-right: 183px;
+  }
+}*/
+.guarantee-title {
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+  margin-bottom: 30px;
+  /*padding-top: 50px;*/
+
+  @include for-size(desktop) {
+    font-size: 46px;
+    margin-bottom: 50px;
+    /*padding-top: 130px;*/
+  }
+}
+.guarantee-item {
+  position: relative;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: $additional-text-color;
+  padding-left: 40px;
+  word-wrap: break-word;
+
+  &:not(:last-child) {
+    margin-bottom: 23px;
+  }
+
+  @include for-size(tablet-landscape) {
+    padding-left: 44px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  @include for-size(desktop) {
+    font-size: 20px;
+    line-height: 28px;
+    padding-left: 50px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+.list.guarantee-list {
+  background-color: $background-gray-color;
+  padding-top: 30px;
+  padding-bottom: 31px;
+  padding-right: 20px;
+  padding-left: 27px;
+
+  @include for-size(tablet-landscape) {
+    padding-right: 50px;
+    padding-left: 86px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 50px;
+    padding-bottom: 45px;
+    padding-right: 112px;
+    padding-left: 112px;
+  }
+
+  :before {
+    position: absolute;
+    z-index: 1;
+    content: '';
+    left: 0;
+    top: 0;
+    display: block;
+    width: 15px;
+    height: 20px;
+    //margin-right: 30px;
+    background-image: url('../images/icons/fire.svg');
+    background-size: contain;
+
+    @include for-size(desktop) {
+      width: 22px;
+      height: 30px;
+    }
+  }
+
+  :after {
+    position: absolute;
+    content: '';
+    left: 6px;
+    top: 20px;
+    display: block;
+    width: 0px;
+    height: 100%;
+    border: 1px dashed $secondary-text-color;
+
+    @include for-size(desktop) {
+      left: 9.5px;
+    }
+  }
+}
+
+.guarantee-item:last-child::after {
+  display: none;
+}
+
+.accent-text {
+  color: $accent-color;
+}

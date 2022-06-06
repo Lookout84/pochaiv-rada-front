@@ -1,0 +1,272 @@
+.section-reviews {
+  background-color: $background-white-color;
+}
+
+.container-reviews {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  /*@include for-size(tablet-landscape) {
+    margin-left: 27px;
+    margin-right: 28px;
+  }
+  @include for-size(desktop) {
+    margin-left: 210px;
+    margin-right: 212px;
+  }*/
+}
+.reviews-title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+  margin-bottom: 20px;
+  /*padding-top: 50px;*/
+
+  @include for-size(tablet-landscape) {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 46px;
+    margin-bottom: 50px;
+    /*padding-top: 130px;*/
+  }
+}
+.review-block {
+  background: $background-white-color;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  display: inline-block;
+  max-width: 1090px;
+  margin-left: auto;
+  margin-right: auto;
+  /*padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;*/
+  /*margin-left: 20px;
+  margin-right: 20px;*/
+
+  @include for-size(tablet-landscape) {
+    display: flex;
+    /*padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;*/
+    /*margin-left: 12.5px;
+    margin-right: 12.5px;*/
+  }
+  @include for-size(desktop) {
+    display: flex;
+    /*padding-left: 82px;
+    padding-right: 112px;
+    padding-top: 50px;
+    padding-bottom: 51px;*/
+    /*margin-left: 84px;
+    margin-right: 84px;*/
+  }
+}
+
+.review-person {
+  @include for-size(tablet-landscape) {
+    margin-right: 46px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 40px;
+  }
+}
+
+.review-photo {
+  display: block;
+  margin-bottom: 20px;
+
+  @include for-size(tablet-portrait) {
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.review-content {
+  text-overflow: ellipsis;
+}
+
+.reviews-subtitle {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: $accent-color;
+  margin-bottom: 10px;
+  margin-top: 0;
+
+  @include for-size(tablet-landscape) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 30px;
+    line-height: 37px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
+
+.reviews-secondary-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: $secondary-text-color;
+  margin-bottom: 10px;
+
+  @include for-size(tablet-landscape) {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+
+.review-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: $additional-text-color;
+
+  @include for-size(tablet-landscape) {
+    text-align: start;
+  }
+
+  @include for-size(desktop) {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: start;
+  }
+}
+
+.list .reviews-names {
+  display: flex;
+  margin-top: 20px;
+  /*margin-bottom: 50px;*/
+  justify-content: center;
+
+  @include for-size(tablet-landscape) {
+    margin-top: 30px;
+  }
+
+  @include for-size(desktop) {
+    margin-top: 40px;
+    /*margin-bottom: 130px;*/
+  }
+}
+
+.reviews-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:nth-child(n + 4) {
+    @include for-size(mobile-only) {
+      display: none;
+    }
+  }
+  @include for-size(tablet-landscape) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  @include for-size(desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.button-arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-image: url('../images/icons/SVG/arrow-left.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  min-width: 25px;
+  min-height: 25px;
+
+  @include for-size(mobile-only) {
+    top: 107%;
+  }
+
+  @include for-size(tablet-only) {
+    left: -3%;
+  }
+
+  @include for-size(desktop) {
+    left: 6%;
+  }
+}
+.button-arrow-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  background-image: url('../images/icons/SVG/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  min-width: 25px;
+  min-height: 25px;
+
+  @include for-size(mobile-only) {
+    top: 107%;
+  }
+  @include for-size(tablet-only) {
+    right: -3%;
+  }
+
+  @include for-size(desktop) {
+    right: 6%;
+  }
+}
+.social-icons-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: transparent;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  fill: #436eab;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: #436eab;
+    fill: white;
+  }
+}
