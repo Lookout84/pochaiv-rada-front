@@ -1,12 +1,17 @@
 import React from 'react';
-import Article from './components/Articles';
+// import Article from './components/Articles';
+import ArticlesList from './components/ArticlesList/ArticlesList';
+import articles from './data/articles.json';
+import Container from './components/Container/Container';
+
+console.log(articles);
 
 const App = () => {
     return (
-        <div>
+        <Container>
             <h1>Головна сторінка</h1>
-            <Article />;
-        </div>
+            <ArticlesList articles={articles} />;
+        </Container>
     );
 };
 
