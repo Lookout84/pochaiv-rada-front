@@ -2,12 +2,13 @@ import React from 'react';
 // import styles from './AppBar.module.css';
 import { Form, FormControl, Button, Container, NavDropdown, Navbar, Nav } from 'react-bootstrap';
 
+
 const AppBar = () => {
     return (
         <header>
             <Navbar bg="light" expand="lg">
                 <Container fluid>
-                    <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                    <Navbar.Brand href="#">Почаївська територіальна громада</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -15,15 +16,22 @@ const AppBar = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link href="#action1">Home</Nav.Link>
-                            <Nav.Link href="#action2">Link</Nav.Link>
-                            <NavDropdown title="Link" id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">
-                                    Something else here
-                                </NavDropdown.Item>
+                            <Nav.Link href="#action1">Головна</Nav.Link>
+                            <Nav.Link href="#action2">Новини</Nav.Link>
+                            <NavDropdown title="Про громаду" id="navbarScrollingDropdown">
+                                <NavDropdown.Item href="#action3">Історія Почаєва</NavDropdown.Item>
+                                <NavDropdown.Item href="#action4">Символи Почаєва</NavDropdown.Item>
+                                <NavDropdown.Item href="#action6">Старостинські округи</NavDropdown.Item>
+                                <NavDropdown.Item href="#action5">Видатні діячі</NavDropdown.Item>
+                                <NavDropdown.Item href="#action6">Визначні місця</NavDropdown.Item>
+                            </NavDropdown>
+                            <NavDropdown title="Міська рада" id="navbarScrollingDropdown">
+                                <NavDropdown.Item href="#action3">Міський голова</NavDropdown.Item>
+                                <NavDropdown.Item href="#action4">Заступники</NavDropdown.Item>
+                                <NavDropdown.Item href="#action5">Виконавчий комітет</NavDropdown.Item>
+                                <NavDropdown.Item href="#action6">Склад постійних комісій</NavDropdown.Item>
+                                <NavDropdown.Item href="#action7">Організаційна структура</NavDropdown.Item>
+                                <NavDropdown.Item href="#action9">Депутатський склад</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="#" disabled>
                                 Link
@@ -32,18 +40,18 @@ const AppBar = () => {
                         <Form className="d-flex">
                             <FormControl
                                 type="search"
-                                placeholder="Search"
+                                placeholder="Пошук"
                                 className="me-2"
                                 aria-label="Search"
                             />
-                            <Button variant="outline-success">Search</Button>
+                            <Button variant="outline-success">Пошук</Button>
                         </Form>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </header>
+        </header >
     )
-}
+};
 
 
 export default AppBar;

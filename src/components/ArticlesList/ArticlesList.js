@@ -8,6 +8,7 @@ const ArticlesList = ({ articles }) => (
             <li key={article.id}>
                 <Articles
                     title={article.title}
+                    image={article.image}
                     body={article.body}
                     author={article.author}
                     date={article.date}
