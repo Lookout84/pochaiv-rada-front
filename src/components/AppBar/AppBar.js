@@ -1,18 +1,17 @@
 import React from 'react';
-// import styles from './AppBar.module.css';
 import { Form, FormControl, Button, Container, NavDropdown, Navbar, Nav } from 'react-bootstrap';
-
+import Logo from '../../images/Pochaiv.png';
 
 const AppBar = () => {
     return (
         <header>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="warning" expand="lg">
                 <Container fluid>
-                    <Navbar.Brand href="#">Почаївська територіальна громада</Navbar.Brand>
+                    <Navbar.Brand href="/"><img src={Logo} width="50" alt="Герб Почаєва" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
-                            className="me-auto my-2 my-lg-0"
+                            className="me-auto my-2 my-lg-5"
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
@@ -37,7 +36,7 @@ const AppBar = () => {
                                 Link
                             </Nav.Link>
                         </Nav>
-                        <Form className="d-flex">
+                        <Form className="d-flex me-3">
                             <FormControl
                                 type="search"
                                 placeholder="Пошук"

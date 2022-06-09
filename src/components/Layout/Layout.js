@@ -1,13 +1,16 @@
 import React from "react";
 import AppBar from "../AppBar/AppBar";
 import Container from "../Container/Container";
-import FooterContainer from "../Container/Footer";
+import Footer from '../Footer/Footer';
+import socials from '../../data/social.json';
+console.log(socials);
+console.log(socials.map((social) => social.icon));
 
 const Layout = ({ children }) => (
     <>
         <AppBar />
         <Container>{children}</Container>
-        <FooterContainer />
+        <Footer socials={socials} />
     </>
 );
 

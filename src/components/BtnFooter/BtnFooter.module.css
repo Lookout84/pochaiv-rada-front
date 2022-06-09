@@ -1,0 +1,38 @@
+.Btn_subscription {
+    position: relative;
+    background: #2196F3;
+    border-radius: 4px;
+    letter-spacing: 0.06em;
+    color: #fff;
+    border: transparent;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    height: 50px;
+    min-width: 200px;
+    padding: 0;
+}
+
+@media screen and (min-width: 1200px) {
+    .Btn_subscription {
+        margin-left: 12px;
+    }
+}
+
+.Btn_text {
+    position: absolute;
+    top: 50%;
+    right: 53%;
+    transform: translate(50%, -50%);
+    padding: 10px 0;
+    margin-right: 10px;
+}
+
+.Btn_box {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    max-width: 200px;
+}
