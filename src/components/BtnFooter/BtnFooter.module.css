@@ -28,15 +28,6 @@
     margin-right: 10px;
 }
 
-.Btn_box {
-    display: block;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    height: 50px;
-    max-width: 200px;
-}
-
 .Icon_send {
     position: absolute;
     top: 13px;

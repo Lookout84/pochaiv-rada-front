@@ -5,13 +5,13 @@ import Logo from '../../images/Pochaiv.png';
 const AppBar = () => {
     return (
         <header>
-            <Navbar bg="warning" expand="lg">
+            <Navbar bg="light" expand="lg">
                 <Container fluid>
                     <Navbar.Brand href="/"><img src={Logo} width="50" alt="Герб Почаєва" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
-                            className="me-auto my-2 my-lg-5"
+                            className="me-auto my-2 my-lg-4"
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
@@ -26,11 +26,24 @@ const AppBar = () => {
                             </NavDropdown>
                             <NavDropdown title="Міська рада" id="navbarScrollingDropdown">
                                 <NavDropdown.Item href="#action3">Міський голова</NavDropdown.Item>
+                                <NavDropdown.Item href="#action3">Секретар міської ради</NavDropdown.Item>
                                 <NavDropdown.Item href="#action4">Заступники</NavDropdown.Item>
+                                <NavDropdown.Item href="#action4">Керуючий справами виконавчого комітету</NavDropdown.Item>
                                 <NavDropdown.Item href="#action5">Виконавчий комітет</NavDropdown.Item>
                                 <NavDropdown.Item href="#action6">Склад постійних комісій</NavDropdown.Item>
                                 <NavDropdown.Item href="#action7">Організаційна структура</NavDropdown.Item>
                                 <NavDropdown.Item href="#action9">Депутатський склад</NavDropdown.Item>
+                            </NavDropdown>
+                            <NavDropdown title="Публічна інформація" id="navbarScrollingDropdown">
+                                <NavDropdown.Item href="#action3">Розпорядження міського голови</NavDropdown.Item>
+                                <NavDropdown.Item href="#action4">Проєкти рішень сесії</NavDropdown.Item>
+                                <NavDropdown.Item href="#action5">Проєкти рішень виконкому</NavDropdown.Item>
+                                <NavDropdown.Item href="#action6">Рішення сесій</NavDropdown.Item>
+                                <NavDropdown.Item href="#action7">Рішення виконкому</NavDropdown.Item>
+                                <NavDropdown.Item href="#action9">Бюджет міста</NavDropdown.Item>
+                                <NavDropdown.Item href="#action6">Звіти</NavDropdown.Item>
+                                <NavDropdown.Item href="#action7">Регуляторна політика</NavDropdown.Item>
+                                <NavDropdown.Item href="#action9">Запобігання корупції</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="#" disabled>
                                 Link

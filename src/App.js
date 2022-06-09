@@ -1,6 +1,6 @@
 import React from 'react';
 // import Article from './components/Articles';
-import ArticlesList from './components/ArticlesList/ArticlesList';
+// import ArticlesList from './components/ArticlesList/ArticlesList';
 import articles from './data/articles.json';
 // import Container from './components/Container/Container';
 // import AppBar from './components/AppBar/AppBar';
@@ -15,8 +15,7 @@ const App = () => {
     return (
         <Layout>
             <CarouselApp articles={articles} />
-            <h1>Головна сторінка</h1>
-            <ArticlesList articles={articles} />
+            {/* <ArticlesList articles={articles} /> */}
         </Layout>
     );
 };

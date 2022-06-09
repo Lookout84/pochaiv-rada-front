@@ -15,23 +15,23 @@ const Footer = ({ socials }) => {
                             <address className={s.Address}>
                                 <ul className={s.List}>
                                     <li className={s.Logo_footer}>
-                                        <span className={s.Logo_web}>Web </span>
-                                        <span className={s.Logo_white}>Studio</span>
+                                        <span className={s.Logo_web}>Почаївська міська рада</span>
+                                        <p><span className={s.Logo_white}>офіційна сторінка</span></p>
                                     </li>
                                     <li className={s.Addr_footer}>
-                                        <span className={s.Addr}>г. Киев, пр-т Леси Украинки, 26</span>
+                                        <span className={s.Addr}>47025, м. Почаїв, Тернопільська область, Кременецький район, вул. Возз'єдання, 16</span>
                                     </li>
                                     <li className={s.Addr_footer}>
-                                        <a href="mailto:info@devstudio.com" className={s.Contacts_footer}>info@devstudio.com</a>
+                                        <a href="mailto:pochaiv_rada@ukr.net" className={s.Contacts_footer}>pochaiv_rada@ukr.net</a>
                                     </li>
                                     <li className={s.Addr_footer}>
-                                        <a href="tel:380961111111" className={s.Contacts_footer}>+38 096 111 11 11</a>
+                                        <a href="tel:380354661168" className={s.Contacts_footer}>+38 03546 611 68</a>
                                     </li>
                                 </ul>
                             </address>
                         </div>
                         <div className={s.Footer_box_list}>
-                            <h2 className={s.Footer_title}>Присоединяйтесь</h2>
+                            <h2 className={s.Footer_title}>Ми в соціальних мережах</h2>
                             <ul className={`${s.List} ${s.Social_footer}`}>
                                 {socials.map((social) =>
                                     <li key={social.id} className={s.Social_footer_link}>
@@ -43,7 +43,7 @@ const Footer = ({ socials }) => {
                     </div>
                     <div className={s.Footer_box_item}>
                         <div className={s.Footer_form_box}>
-                            <h2 className={s.Footer_title}>Подпешитесь на рассылку</h2>
+                            <h2 className={s.Footer_title}>Підписатись на новини</h2>
                             <div className={s.Footer_subscription_box}>
                                 <FormFooter />
                                 <BtnFooter />

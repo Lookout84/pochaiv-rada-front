@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import socials from '../../data/social.json';
 console.log(socials);
 console.log(socials.map((social) => social.icon));
+// import facebook from '../../images/icons/'
 
 const Layout = ({ children }) => (
     <>
