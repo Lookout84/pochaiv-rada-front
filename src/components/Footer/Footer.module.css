@@ -40,7 +40,7 @@
         margin-left: 30px;
     }
 
-    .Footer_box_item.footer_flexbox {
+    .Footer_box_item.Footer_flexbox {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -58,7 +58,7 @@
         width: calc((100% - 30px) / 2);
     }
 
-    .Footer_box_list.footer_flexbox {
+    .Footer_box_list.Footer_flexbox {
         display: flex;
         align-content: flex-start;
     }
@@ -102,12 +102,6 @@
     }
 }
 
-.Icon_send {
-    position: absolute;
-    top: 13px;
-    right: 28px;
-}
-
 .List {
     list-style: none;
     margin: 0;
@@ -129,7 +123,7 @@
 }
 
 
-.Section-title {
+.Section_title {
     font-weight: 700;
     font-size: 28px;
     line-height: 1.167;
@@ -165,5 +159,102 @@
 @media screen and (min-width: 1200px) {
     .Container {
         width: 1200px;
+    }
+}
+
+.Logo {
+    text-decoration: none;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.19;
+    color: #212121;
+}
+
+.Logo_web,
+.Logo_white {
+    color: #2196f3;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.19;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .Logo_web,
+    .Logo_white {
+        font-size: 26px;
+    }
+}
+
+.Logo_footer {
+    margin-bottom: 20px;
+}
+
+.Logo_white {
+    color: #fff;
+    padding: 0;
+}
+
+.Address {
+    font-style: normal;
+}
+
+.Addr {
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+}
+
+.Contacts_footer {
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Contacts_footer:hover,
+.Contacts_footer:focus {
+    color: #2196f3;
+}
+
+.Addr_footer {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.Addr_footer:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.Social_footer_link,
+.Social_footer_item {
+    height: 44px;
+    width: 44px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Social_footer_link:not(:last-child),
+.Social_footer_item:not(:last-child) {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1199px) {
+    .Social_footer {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .Social_footer {
+        display: flex;
+        justify-content: flex-start;
     }
 }

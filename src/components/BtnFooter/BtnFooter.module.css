@@ -36,3 +36,9 @@
     height: 50px;
     max-width: 200px;
 }
+
+.Icon_send {
+    position: absolute;
+    top: 13px;
+    right: 28px;
+}
