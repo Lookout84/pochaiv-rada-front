@@ -2,25 +2,25 @@
     {
         "id": "1",
         "title": "Instagram",
-        "icon": "../../images/icons/instagram.png",
+        "icon": "http://pochaiv-rada.gov.ua/images/icons/instagram.svg",
         "link": "https://instagram.com"
     },
     {
         "id": "2",
         "title": "Twitter",
-        "icon": "../../images/icons/twitter.png",
+        "icon": "http://pochaiv-rada.gov.ua/images/icons/twitter.svg",
         "link": "https://twitter.com"
     },
     {
         "id": "3",
         "title": "Facebook",
-        "icon": "../../images/icons/facebook.png",
+        "icon": "http://pochaiv-rada.gov.ua/images/icons/facebook.svg",
         "link": "https://facebook.com"
     },
     {
         "id": "4",
         "title": "Linkedin",
-        "icon": "../../images/icons/linkedin.png",
+        "icon": "http://pochaiv-rada.gov.ua/images/icons/linkedin.svg",
         "link": "https://linkedin.com"
     }
 ]

@@ -1,20 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Carousel } from 'react-bootstrap';
+// import { Carousel } from 'react-bootstrap';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import s from 'react-responsive-carousel/lib/styles/carousel.min.css'
+console.log(s)
 
 const CarouselApp = ({ articles }) => {
     return (
-        <Carousel>{articles.map((article) =>
-            <Carousel.Item key={article.id}>
-                <img
-                    className="d-block w-100"
-                    src={article.image}
-                    alt={article.title}
-                />
-                <Carousel.Caption>
-                    <h3>{article.title}</h3>
-                </Carousel.Caption>
-            </Carousel.Item>
+        <Carousel >{articles.map((article) =>
+            <div key={article.id}>
+                <img src={article.image} alt={article.title} />
+                <p className="legend">{article.title}</p>
+            </div>
+            //     <Carousel.Item key={article.id}>
+            //         <img
+            //             className="d-block w-100"
+            //             src={article.image}
+            //             alt={article.title}
+            //         />
+            //         <Carousel.Caption>
+            //             <h3>{article.title}</h3>
+            //         </Carousel.Caption>
+            //     </Carousel.Item>
         )}
         </Carousel>
     )

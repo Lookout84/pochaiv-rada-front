@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "img": "http://pochaiv-rada.gov.ua/images/images/igor.jpg",
+        "name": "Бойко Василь Сергійович",
+        "position": "Міський голова"
+    },
+    {
+        "id": "2",
+        "img": "http://pochaiv-rada.gov.ua/images/images/myhailo.jpg",
+        "name": "Максимчук Сергій Вікторович",
+        "position": "Заступник міського голови"
+    },
+    {
+        "id": "3",
+        "img": "http://pochaiv-rada.gov.ua/images/images/mykola.jpg",
+        "name": "Чубик Андрій Віталійович",
+        "position": "Заступник міського голови"
+    },
+    {
+        "id": "4",
+        "img": "http://pochaiv-rada.gov.ua/images/images/olga.jpg",
+        "name": "Лівінюк Віктор Петрович",
+        "position": "Секретар (керуючий справами) виконавчого комітету"
+    },
+    {
+        "id": "5",
+        "img": "http://pochaiv-rada.gov.ua/images/images/olga 1.jpg",
+        "name": "Мамчур Сергій Миколайович",
+        "position": "Секретар міської ради"
+    }
+]

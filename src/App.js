@@ -2,21 +2,39 @@ import React from 'react';
 // import Article from './components/Articles';
 // import ArticlesList from './components/ArticlesList/ArticlesList';
 import articles from './data/articles.json';
-// import Container from './components/Container/Container';
-// import AppBar from './components/AppBar/AppBar';
 import Layout from './components/Layout/Layout';
 import CarouselApp from './components/Carousel/Carousel';
+import { Container, Row, Col } from 'react-bootstrap';
+import WeatherApp from './components/Weather/Weather';
+import './styles.css';
+import WorkersCard from './components/WorkersCard/WorkersCard';
+import workers from './data/workers.json';
 
 
-
-console.log(articles);
+console.log(workers);
 
 const App = () => {
     return (
         <Layout>
-            <CarouselApp articles={articles} />
-            {/* <ArticlesList articles={articles} /> */}
-        </Layout>
+            <section class="section">
+                <Container>
+                    <Row>
+                        <Col>
+                            <CarouselApp articles={articles} />
+                        </Col>
+                        <Col xs lg="3">
+                            <WorkersCard workers={workers} />
+                        </Col>
+                        <Col xs lg="3">
+                            <WeatherApp />
+                        </Col>
+                    </Row >
+                </Container >
+            </section>
+            <section>
+                {/* <ArticlesList articles={articles} /> */}
+            </section>
+        </Layout >
     );
 };
 

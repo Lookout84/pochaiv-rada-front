@@ -45,9 +45,14 @@ const AppBar = () => {
                                 <NavDropdown.Item href="#action7">Регуляторна політика</NavDropdown.Item>
                                 <NavDropdown.Item href="#action9">Запобігання корупції</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="#" disabled>
-                                Link
-                            </Nav.Link>
+                            <NavDropdown title="Структурні підрозділи" id="navbarScrollingDropdown">
+                                <NavDropdown.Item href="#action3">Фінансовий відділ</NavDropdown.Item>
+                                <NavDropdown.Item href="#action4">Відділ освіти, молоді та спорту</NavDropdown.Item>
+                                <NavDropdown.Item href="#action5">Відділ соціального захисту населення та праці</NavDropdown.Item>
+                                <NavDropdown.Item href="#action6">Центр надання соціальних послуг</NavDropdown.Item>
+                                <NavDropdown.Item href="#action7">Центр культурних послуг</NavDropdown.Item>
+                            </NavDropdown>
+                            <Nav.Link href="#" >Контакти</Nav.Link>
                         </Nav>
                         <Form className="d-flex me-3">
                             <FormControl

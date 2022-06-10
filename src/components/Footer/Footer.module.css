@@ -155,9 +155,9 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
     .Container {
-        width: 1200px;
+        width: 1440px;
     }
 }
 
@@ -179,15 +179,16 @@
     line-height: 1.19;
 }
 
-.Logo_white{
+.Logo_white {
     font-size: 14px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
 
-    .Logo_web{
+    .Logo_web {
         font-size: 20px;
     }
+
     .Logo_white {
         font-size: 16px;
     }
@@ -250,14 +251,14 @@
     margin-right: 10px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1439px) {
     .Social_footer {
         display: flex;
         justify-content: center;
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
     .Social_footer {
         display: flex;
         justify-content: flex-start;

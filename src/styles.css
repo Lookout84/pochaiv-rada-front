@@ -18,3 +18,8 @@
     line-height: 1.714;
     letter-spacing: 0.03em;
 }
+
+.section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
