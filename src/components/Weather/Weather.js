@@ -36,8 +36,8 @@ class Weather extends Component {
         const { handleChange, handleSumbit } = this;
         const { data, search } = this.state;
         const { name, main, weather, wind } = data;
-        console.log("main", main);
-        console.log("weather", weather);
+        // console.log("main", main);
+        // console.log("weather", weather);
 
         return (
             <>
@@ -58,7 +58,7 @@ class Weather extends Component {
                             <h1 className={s.temp}>{Math.round(main.temp)}°C</h1>
                             <ul className={s.flex}>
                                 {weather.map((el) => {
-                                    console.log(el);
+                                    // console.log(el);
                                     const { icon } = el;
                                     return (
                                         <li key={el.id} className={s.box}>
