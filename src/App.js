@@ -5,7 +5,7 @@ import articles from './data/articles.json';
 import Layout from './components/Layout/Layout';
 import CarouselApp from './components/Carousel/Carousel';
 import { Container, Row, Col } from 'react-bootstrap';
-import WeatherApp from './components/Weather/Weather';
+import CalendarApp from './components/Calendar/Calendar';
 import './styles.css';
 import WorkersCard from './components/WorkersCard/WorkersCard';
 import workers from './data/workers.json';
@@ -26,7 +26,7 @@ const App = () => {
                             <WorkersCard workers={workers} />
                         </Col>
                         <Col xs lg="3">
-                            <WeatherApp />
+                            <CalendarApp />
                         </Col>
                     </Row >
                 </Container >

@@ -1,111 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.ticker_wrap {
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 1rem;
+    background-color: rgba(255, 255, 255, 0.333);
+    padding-left: 100%;
+    box-sizing: content-box;
+}
+
+.ticker_wrap .ticker {
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-items: baseline;
+    height: 1rem;
+    line-height: 1rem;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 30s;
+    animation-duration: 30s;
+}
+
+.ticker_wrap .ticker__item {
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    padding: 0 2rem;
+    font-size: 14px;
+    color: rgb(9, 165, 249);
+}
+
+.span {
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(239, 189, 9);
+}
+
 /* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-  background: #222;
-  background-image: url("https://source.unsplash.com/1600x900/?landscape");
-  background-size: cover;
-  font-size: 120%;
+    padding-bottom: 5rem;
 } */
 
-.card {
-    background: rgba(148, 207, 235, 0.286);
-    color: rgb(8, 8, 8);
-    /* padding: 2em; */
-    border-radius: 14px;
-    width: 100%;
-    max-width: 320px;
-    /* margin: 1em; */
-    overflow: hidden;
-}
-
-.search {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-    /* border-radius: 30px; */
-}
-
-/* button {
-    margin: 0.5em;
-    border-radius: 50%;
-    border: none;
-    height: 44px;
-    width: 44px;
-    outline: none;
-    background: #7c7c7c2b;
-    color: white;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-  } */
-
-input.searchBar {
-    border: none;
-    outline: none;
-    padding: 0.5em 1em;
-    border-radius: 14px;
-    background: #ffffffad;
-    color: white;
-    border-bottom: 1px solid white;
-    font-family: inherit;
-    font-size: 105%;
-    width: calc(100%);
-}
-
-button:hover {
-    background: #7c7c7c6b;
-}
-
-.weather {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-
-    /* border-radius: 30px; */
-}
-
-.city {
-    margin: 0.4em 0;
-}
-
-h1.temp {
-    margin: 0;
-    margin-bottom: 0.4em;
-}
-
-.flex {
-    display: flex;
-    align-items: baseline;
-    margin: 0px;
-}
-
-.box {
-    display: flex;
-}
-
-.description {
-    text-transform: capitalize;
-    margin-left: 4px;
-}
-
-.weather.loading {
-    visibility: hidden;
-    max-height: 30px;
-    position: relative;
-}
-
-.weather.loading:after {
-    visibility: visible;
-    content: "Завантаження...";
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 20px;
+h1,
+h2,
+p {
+    padding: 0 5%;
 }

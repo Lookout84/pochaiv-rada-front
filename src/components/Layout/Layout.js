@@ -3,12 +3,12 @@ import AppBar from "../AppBar/AppBar";
 import Container from "../Container/Container";
 import Footer from '../Footer/Footer';
 import socials from '../../data/social.json';
-console.log(socials);
-console.log(socials.map((social) => social.icon));
-// import facebook from '../../images/icons/'
+import WeatherApp from '../Weather/Weather';
+
 
 const Layout = ({ children }) => (
     <>
+        <WeatherApp />
         <AppBar />
         <Container>{children}</Container>
         <Footer socials={socials} />
