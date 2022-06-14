@@ -16,7 +16,7 @@ console.log(workers);
 const App = () => {
     return (
         <Layout>
-            <section class="section">
+            <section className="section">
                 <Container>
                     <Row>
                         <Col>
