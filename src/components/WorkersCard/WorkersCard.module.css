@@ -14,3 +14,11 @@
     max-height: 100%;
     align-content: center;
 }
+
+.img_box {
+    position: relative;
+}
+
+.title_box {
+    position: absolute;
+}

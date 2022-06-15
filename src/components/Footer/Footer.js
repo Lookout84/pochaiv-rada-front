@@ -25,6 +25,9 @@ const Footer = ({ socials }) => {
                                         <a href="mailto:pochaiv_rada@ukr.net" className={s.Contacts_footer}>pochaiv_rada@ukr.net</a>
                                     </li>
                                     <li className={s.Addr_footer}>
+                                        <a href="mailto:14052785@mail.gov.ua" className={s.Contacts_footer}>14052785@mail.gov.ua</a>
+                                    </li>
+                                    <li className={s.Addr_footer}>
                                         <a href="tel:380354661168" className={s.Contacts_footer}>+38 03546 611 68</a>
                                     </li>
                                 </ul>

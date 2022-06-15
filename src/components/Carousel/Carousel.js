@@ -4,11 +4,9 @@ import PropTypes from 'prop-types';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-
-
 const CarouselApp = ({ articles }) => {
     return (
-        <Carousel>{articles.map((article) =>
+        <Carousel autoPlay={true} autoFocus={true} showThumbs={false} showStatus={false} useKeyboardArrows className="presentation-mode">{articles.map((article) =>
             <div key={article.id}>
                 <img src={article.image} alt={article.title} />
                 <p className="legend">{article.title}</p>

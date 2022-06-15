@@ -1,8 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { render } from "react-dom";
-// import { Card, Carousel } from 'react-bootstrap';
-import 'tiny-slider/dist/tiny-slider.css';
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import s from './WorkersCard.module.css';
@@ -13,13 +10,15 @@ function WorkersCard({ workers }) {
 
     return (
         <div className="slide-container">
-            <Fade>
+            <Fade arrows={false}>
                 {workers.map((worker) => (
                     <div className="each-fade" key={worker.id}>
-                        <div className="image-container">
+                        <div className={`"image-container" {s.img_box}`}>
                             <img className={s.img} src={worker.img} alt={worker.name} />
-                            <h5 className={s.title}>{worker.name}</h5>
-                            <p className={s.text}>{worker.position}</p>
+                            <div className={s.title_box}>
+                                <h5 className={s.title}>{worker.name}</h5>
+                                <p className={s.text}>{worker.position}</p>
+                            </div>
                         </div>
                     </div>
                 ))
