@@ -5,7 +5,7 @@ import Logo from '../../images/Pochaiv.png';
 const AppBar = () => {
     return (
         <header>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="primary" variant="dark" expand="lg">
                 <Container fluid>
                     <Navbar.Brand href="/"><img src={Logo} width="50" alt="Герб Почаєва" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />

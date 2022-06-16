@@ -1,5 +1,5 @@
 .Footer {
-    background-color: #2f303a;
+    background-color: #ffd700;
     padding: 60px 0 60px;
 }
 
@@ -65,14 +65,14 @@
 }
 
 .Footer_icon {
-    fill: #fff;
+    fill: rgb(10, 10, 10);
     display: block;
 }
 
 .Footer_title {
     font-weight: 700;
     line-height: 1.143;
-    color: #fff;
+    color: rgb(10, 10, 10);
     text-transform: uppercase;
     font-size: 14px;
     margin: 0;
@@ -199,7 +199,7 @@
 }
 
 .Logo_white {
-    color: #fff;
+    color: rgb(10, 10, 10);
     padding: 0;
 }
 
@@ -209,7 +209,7 @@
 
 .Addr {
     font-weight: 400;
-    color: #fff;
+    color: rgb(10, 10, 10);
     margin: 0;
 }
 
@@ -217,7 +217,7 @@
     font-weight: 400;
     font-size: 14px;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgb(10, 10, 10);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
