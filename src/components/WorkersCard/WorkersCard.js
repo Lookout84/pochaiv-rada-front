@@ -26,27 +26,6 @@ function WorkersCard({ workers }) {
             </Fade >
         </div >
     )
-    // const [index, setIndex] = useState(0);
-
-    // const handleSelect = (selectedIndex, e) => {
-    //     setIndex(selectedIndex);
-    // };
-    // return (
-    //     <Carousel activeIndex={index} onSelect={handleSelect} variant="dark">{workers.map((worker) =>
-    //         <Carousel.Item>
-    //             <Card>
-    //                 <Card.Img variant="top" src={worker.img} />
-    //                 <Card.Body>
-    //                     <Card.Text>
-    //                         {worker.position}
-    //                     </Card.Text>
-    //                     <h5>{worker.name}</h5>
-    //                 </Card.Body>
-    //             </Card>
-    //         </Carousel.Item>
-    //     )}
-    //     </Carousel>
-    // )
 };
 
 WorkersCard.propTypes = {
