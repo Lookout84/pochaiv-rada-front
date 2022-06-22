@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './BtnFooter.module.css';
 import iconSend from '../../images/icons/icon-send.png';
+// const iconSend = "pochaiv-rada.gov.ua/images/icons/icon-send.svg"
 
 const BtnFooter = () => {
     return (
