@@ -13,12 +13,13 @@
     min-width: 300px;
     max-height: 100%;
     align-content: center;
+    padding-bottom: 10px;
 }
 
 .img_box {
     position: relative;
 }
 
-.title_box {
+/* .title_box {
     position: absolute;
-}
+} */

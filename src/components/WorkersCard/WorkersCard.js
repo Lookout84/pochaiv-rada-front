@@ -13,6 +13,7 @@ function WorkersCard({ workers }) {
             <Fade arrows={false}>
                 {workers.map((worker) => (
                     <div className="each-fade" key={worker.id}>
+                        <h2 className={s.title}>Керівництво</h2>
                         <div className={`"image-container" {s.img_box}`}>
                             <img className={s.img} src={worker.img} alt={worker.name} />
                             <div className={s.title_box}>

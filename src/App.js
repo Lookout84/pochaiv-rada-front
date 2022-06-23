@@ -9,6 +9,9 @@ import CalendarApp from './components/Calendar/Calendar';
 import './styles.css';
 import WorkersCard from './components/WorkersCard/WorkersCard';
 import workers from './data/workers.json';
+import AppBar from './components/AppBar/AppBar';
+import socials from './data/social.json';
+import Footer from './components/Footer/Footer';
 
 
 console.log(workers);
@@ -16,6 +19,7 @@ console.log(workers);
 const App = () => {
     return (
         <Layout>
+            <AppBar />
             <section className="section">
                 <Container>
                     <Row>
@@ -34,6 +38,7 @@ const App = () => {
             <section>
                 {/* <ArticlesList articles={articles} /> */}
             </section>
+            <Footer socials={socials} />
         </Layout >
     );
 };

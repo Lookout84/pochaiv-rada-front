@@ -1,17 +1,17 @@
 import React from "react";
-import AppBar from "../AppBar/AppBar";
+// import AppBar from "../AppBar/AppBar";
 import Container from "../Container/Container";
-import Footer from '../Footer/Footer';
-import socials from '../../data/social.json';
+// import Footer from '../Footer/Footer';
+// import socials from '../../data/social.json';
 import WeatherApp from '../Weather/Weather';
 
 
 const Layout = ({ children }) => (
     <>
         <WeatherApp />
-        <AppBar />
+        {/* <AppBar /> */}
         <Container>{children}</Container>
-        <Footer socials={socials} />
+        {/* <Footer socials={socials} /> */}
     </>
 );
 

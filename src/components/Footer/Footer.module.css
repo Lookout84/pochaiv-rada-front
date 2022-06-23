@@ -110,15 +110,15 @@
 
 @media screen and (max-width: 1199px) {
     .Section {
-        padding-top: 60px;
+        padding-top: 30px;
         padding-bottom: 30px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .Section {
-        padding-top: 94px;
-        padding-bottom: 94px;
+        padding-top: 40px;
+        padding-bottom: 10px;
     }
 }
 
@@ -227,6 +227,7 @@
 }
 
 .Addr_footer {
+    font-weight: 900;
     display: block;
     margin: 0;
     padding: 0;
@@ -263,4 +264,8 @@
         display: flex;
         justify-content: flex-start;
     }
+}
+
+.icon {
+    margin-right: 5px;
 }
