@@ -6,7 +6,6 @@ import Layout from './components/Layout/Layout';
 import CarouselApp from './components/Carousel/Carousel';
 import { Container, Row, Col } from 'react-bootstrap';
 import CalendarApp from './components/Calendar/Calendar';
-import './styles.css';
 import WorkersCard from './components/WorkersCard/WorkersCard';
 import workers from './data/workers.json';
 import AppBar from './components/AppBar/AppBar';
