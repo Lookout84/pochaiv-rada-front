@@ -1,11 +1,12 @@
 import React from 'react';
 import { Form, FormControl, Button, Container, NavDropdown, Navbar, Nav } from 'react-bootstrap';
 import Logo from '../../images/Pochaiv.png';
+import s from './AppBar.module.css';
 
 const AppBar = () => {
-    return (
+       return (
         <header>
-            <Navbar bg="primary" variant="dark" expand="lg">
+            <Navbar className={s.Nav} sticky="top" fixed="top" bg="primary" variant="dark" expand="lg">
                 <Container fluid>
                     <Navbar.Brand href="/"><img src={Logo} width="50" alt="Герб Почаєва" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />

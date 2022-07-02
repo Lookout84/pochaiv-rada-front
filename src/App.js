@@ -1,6 +1,6 @@
 import React from 'react';
 // import Article from './components/Articles';
-// import ArticlesList from './components/ArticlesList/ArticlesList';
+import ArticlesList from './components/ArticlesList/ArticlesList';
 import articles from './data/articles.json';
 import Layout from './components/Layout/Layout';
 import CarouselApp from './components/Carousel/Carousel';
@@ -35,7 +35,7 @@ const App = () => {
                 </Container >
             </section>
             <section>
-                {/* <ArticlesList articles={articles} /> */}
+                <ArticlesList articles={articles} />
             </section>
             <Footer socials={socials} />
         </Layout >

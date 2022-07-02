@@ -8,10 +8,10 @@ import WeatherApp from '../Weather/Weather';
 
 const Layout = ({ children }) => (
     <>
-        <WeatherApp />
         {/* <AppBar /> */}
         <Container>{children}</Container>
         {/* <Footer socials={socials} /> */}
+        <WeatherApp />
     </>
 );
 
