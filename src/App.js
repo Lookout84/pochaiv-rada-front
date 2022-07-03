@@ -11,6 +11,7 @@ import workers from './data/workers.json';
 import AppBar from './components/AppBar/AppBar';
 import socials from './data/social.json';
 import Footer from './components/Footer/Footer';
+import ScrollArrow from './components/ScrollArrow/ScrollArrow';
 
 
 console.log(workers);
@@ -37,6 +38,7 @@ const App = () => {
             <section>
                 <ArticlesList articles={articles} />
             </section>
+            <ScrollArrow/>
             <Footer socials={socials} />
         </Layout >
     );
