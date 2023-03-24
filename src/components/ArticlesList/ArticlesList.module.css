@@ -1,0 +1,27 @@
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.text {
+    text-align: center;
+}
+
+.img {
+    min-width: 300px;
+    max-height: 100%;
+    align-content: center;
+    padding-bottom: 10px;
+}
+
+.articles_box {
+    padding-top: 20px;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+/* .title_box {
+    position: absolute;
+} */

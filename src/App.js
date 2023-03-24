@@ -13,35 +13,34 @@ import socials from './data/social.json';
 import Footer from './components/Footer/Footer';
 import ScrollArrow from './components/ScrollArrow/ScrollArrow';
 
-
 console.log(workers);
 
 const App = () => {
-    return (
-        <Layout>
-            <AppBar />
-            <section className="section">
-                <Container>
-                    <Row>
-                        <Col>
-                            <CarouselApp articles={articles} />
-                        </Col>
-                        <Col xs lg="3">
-                            <WorkersCard workers={workers} />
-                        </Col>
-                        <Col xs lg="3">
-                            <CalendarApp />
-                        </Col>
-                    </Row >
-                </Container >
-            </section>
-            <section>
-                <ArticlesList articles={articles} />
-            </section>
-            <ScrollArrow/>
-            <Footer socials={socials} />
-        </Layout >
-    );
+  return (
+    <Layout>
+      <AppBar />
+      <section className="section">
+        <Container>
+          <Row>
+            <Col>
+              <CarouselApp articles={articles} />
+            </Col>
+            <Col xs lg="3">
+              <WorkersCard workers={workers} />
+            </Col>
+            <Col xs lg="3">
+              <CalendarApp />
+            </Col>
+          </Row>
+        </Container>
+      </section>
+      <section>
+        <ArticlesList articles={articles} />
+      </section>
+      <ScrollArrow />
+      <Footer socials={socials} />
+    </Layout>
+  );
 };
 
 export default App;
