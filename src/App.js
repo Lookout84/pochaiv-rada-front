@@ -35,7 +35,14 @@ const App = () => {
         </Container>
       </section>
       <section>
-        <ArticlesList articles={articles} />
+        <Container>
+          <Row>
+            <Col sm={10}>
+              <ArticlesList articles={articles} />
+            </Col>
+            <Col sm={2}>sm=4</Col>
+          </Row>
+        </Container>
       </section>
       <ScrollArrow />
       <Footer socials={socials} />

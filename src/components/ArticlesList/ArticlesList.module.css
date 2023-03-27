@@ -18,8 +18,10 @@
     padding-top: 20px;
     list-style: none;
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
 }
 
 /* .title_box {
