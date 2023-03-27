@@ -6,15 +6,16 @@ import { Carousel } from 'react-responsive-carousel';
 import s from './Carousel.module.css';
 
 const CarouselApp = ({ articles }) => {
-    return (
+    return (<div>
+        <h2 className={s.title}>Останні новини</h2>
         <Carousel autoPlay={true} autoFocus={true} showThumbs={false} showStatus={false} useKeyboardArrows className="presentation-mode">{articles.map((article) =>
             <div key={article.id}>
-                <h2 className={s.title}>Останні новини</h2>
                 <img src={article.image} alt={article.title} />
                 <p className="legend">{article.title}</p>
             </div>
         )}
         </Carousel>
+    </div >
     )
 };
 

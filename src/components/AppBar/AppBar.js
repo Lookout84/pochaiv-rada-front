@@ -12,14 +12,18 @@ import Logo from '../../images/Pochaiv.png';
 import s from './AppBar.module.css';
 
 const AppBar = () => {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchText, setSearchText] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
 
-  const handleSearchInputChange = event => {
-    setSearchValue(event.target.value);
-  };
-
-  const handleSearchButtonClick = event => {
-    console.log(searchValue);
+  const handleSearch = () => {
+    const results = [];
+    const elements = document.querySelectorAll('#navbarScrollingDropdown a');
+    for (let i = 0; i < elements.length; i++) {
+      if (elements[i].textContent.includes(searchText)) {
+        results.push(elements[i]);
+      }
+    }
+    setSearchResults(results);
   };
 
   return (
@@ -138,18 +142,19 @@ const AppBar = () => {
               </NavDropdown>
               <Nav.Link href="#">Контакти</Nav.Link>
             </Nav>
-            <Form className="d-flex me-3">
+            <Form className="d-flex me-3" onSubmit={(e) => {
+              e.preventDefault();
+              alert('Пошук в розділі "' + e.target.search.value + '" не знайдено.');
+            }}>
               <FormControl
+                name="search"
                 type="search"
                 placeholder="Пошук"
                 className="me-2"
                 aria-label="Search"
-                value={searchValue}
-                onChange={handleSearchInputChange}
               />
               <Button
-                variant="outline-success"
-                onClick={handleSearchButtonClick}
+                type="submit" variant="outline-light"
               >
                 Пошук
               </Button>
