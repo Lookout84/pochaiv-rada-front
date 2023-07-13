@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 // import Article from './components/Articles';
 import ArticlesList from './components/ArticlesList/ArticlesList';
 import articles from './data/articles.json';
@@ -19,33 +19,35 @@ const App = () => {
   return (
     <Layout>
       <AppBar />
-      <section className="section">
-        <Container>
-          <Row>
-            <Col>
-              <CarouselApp articles={articles} />
-            </Col>
-            <Col xs lg="3">
-              <WorkersCard workers={workers} />
-            </Col>
-            <Col xs lg="3">
-              <CalendarApp />
-            </Col>
-          </Row>
-        </Container>
-      </section>
-      <section>
-        <Container>
-          <Row>
-            <Col sm={10}>
-              <ArticlesList articles={articles} />
-            </Col>
-            <Col sm={2}>sm=4</Col>
-          </Row>
-        </Container>
-      </section>
-      <ScrollArrow />
-      <Footer socials={socials} />
+      <Suspense>
+        <section className="section">
+          <Container>
+            <Row>
+              <Col>
+                <CarouselApp articles={articles} />
+              </Col>
+              <Col xs lg="3">
+                <WorkersCard workers={workers} />
+              </Col>
+              <Col xs lg="3">
+                <CalendarApp />
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        <section>
+          <Container>
+            <Row>
+              <Col sm={10}>
+                <ArticlesList articles={articles} />
+              </Col>
+              <Col sm={2}>sm=4</Col>
+            </Row>
+          </Container>
+        </section>
+        <ScrollArrow />
+        <Footer socials={socials} />
+      </Suspense>
     </Layout>
   );
 };

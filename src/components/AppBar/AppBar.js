@@ -140,12 +140,29 @@ const AppBar = () => {
                   Центр культурних послуг
                 </NavDropdown.Item>
               </NavDropdown>
+              <NavDropdown title="Е-демократія" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="#action3">Е-петиція</NavDropdown.Item>
+                <NavDropdown.Item href="#action4">Е-звернення</NavDropdown.Item>
+                <NavDropdown.Item href="#action5">
+                  Е-консультація
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action6">
+                  Бюджет участі
+                </NavDropdown.Item>
+              </NavDropdown>
               <Nav.Link href="#">Контакти</Nav.Link>
             </Nav>
-            <Form className="d-flex me-3" onSubmit={(e) => {
-              e.preventDefault();
-              alert('Пошук в розділі "' + e.target.search.value + '" не знайдено.');
-            }}>
+            <Form
+              className="d-flex me-3"
+              onSubmit={e => {
+                e.preventDefault();
+                alert(
+                  'Пошук в розділі "' +
+                    e.target.search.value +
+                    '" не знайдено.',
+                );
+              }}
+            >
               <FormControl
                 name="search"
                 type="search"
@@ -153,9 +170,7 @@ const AppBar = () => {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button
-                type="submit" variant="outline-light"
-              >
+              <Button type="submit" variant="outline-light">
                 Пошук
               </Button>
             </Form>
