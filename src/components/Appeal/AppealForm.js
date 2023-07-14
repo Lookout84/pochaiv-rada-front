@@ -287,7 +287,7 @@ const AppealForm = () => {
           />
         </Form.Group>
 
-        <Button type="submit">Надіслати</Button>
+        <Button className='mb-3' type="submit">Надіслати</Button>
       </Form>
     </section>
   );
