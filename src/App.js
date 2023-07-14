@@ -1,54 +1,37 @@
-import React, { Suspense, lazy, useEffect } from 'react';
-// import Article from './components/Articles';
-import ArticlesList from './components/ArticlesList/ArticlesList';
-import articles from './data/articles.json';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
-import CarouselApp from './components/Carousel/Carousel';
-import { Container, Row, Col } from 'react-bootstrap';
-import CalendarApp from './components/Calendar/Calendar';
-import WorkersCard from './components/WorkersCard/WorkersCard';
 import workers from './data/workers.json';
 import AppBar from './components/AppBar/AppBar';
 import socials from './data/social.json';
 import Footer from './components/Footer/Footer';
 import ScrollArrow from './components/ScrollArrow/ScrollArrow';
 
+const HomePage = lazy(() =>
+  import('./views/HomePage' /* webpackChunkName: "home-page" */),
+);
+
+const AppealPage = lazy(() =>
+  import('./views/AppealPage' /* webpackChunkName: "appeal-page" */),
+);
+
 console.log(workers);
 
 const App = () => {
   return (
-    <Layout>
-      <AppBar />
-      <Suspense>
-        <section className="section">
-          <Container>
-            <Row>
-              <Col>
-                <CarouselApp articles={articles} />
-              </Col>
-              <Col xs lg="3">
-                <WorkersCard workers={workers} />
-              </Col>
-              <Col xs lg="3">
-                <CalendarApp />
-              </Col>
-            </Row>
-          </Container>
-        </section>
-        <section>
-          <Container>
-            <Row>
-              <Col sm={10}>
-                <ArticlesList articles={articles} />
-              </Col>
-              <Col sm={2}>sm=4</Col>
-            </Row>
-          </Container>
-        </section>
+    <BrowserRouter>
+      <Layout>
+        <AppBar />
+        <Suspense>
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/appeal" element={<AppealPage />} />
+          </Routes>
+        </Suspense>
         <ScrollArrow />
         <Footer socials={socials} />
-      </Suspense>
-    </Layout>
+      </Layout>
+    </BrowserRouter>
   );
 };
 

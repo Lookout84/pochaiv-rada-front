@@ -47,7 +47,7 @@ const AppBar = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Головна</Nav.Link>
+              <Nav.Link href="/">Головна</Nav.Link>
               <Nav.Link href="#action2">Новини</Nav.Link>
               <NavDropdown title="Про громаду" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action3">
@@ -142,7 +142,7 @@ const AppBar = () => {
               </NavDropdown>
               <NavDropdown title="Е-демократія" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action3">Е-петиція</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Е-звернення</NavDropdown.Item>
+                <NavDropdown.Item href="/appeal">Е-звернення</NavDropdown.Item>
                 <NavDropdown.Item href="#action5">
                   Е-консультація
                 </NavDropdown.Item>
