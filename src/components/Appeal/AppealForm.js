@@ -21,6 +21,10 @@ const AppealForm = () => {
 
   function onChange(value) {
     console.log('Captcha value:', value);
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      isHuman: true,
+    }));
   }
 
   const handleChange = event => {
@@ -35,6 +39,12 @@ const AppealForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
+    // Перевірка на isHuman перед відправкою форми
+    if (!formData.isHuman) {
+      console.log('Підтвердіть, що ви не робот.');
+      return;
+    }
+
     // Ваш код для обробки і відправки даних на електронну пошту
 
     // Приклад виводу даних в консоль
@@ -260,7 +270,12 @@ const AppealForm = () => {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Я - не робот:</Form.Label>
+          <ReCAPTCHA sitekey="Key" onChange={onChange} />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Check
             required
             label="Я погоджуюсь на обробку персональних даних"
@@ -271,11 +286,6 @@ const AppealForm = () => {
             onChange={handleChange}
           />
         </Form.Group>
-
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          Я - не робот:
-        </Form.Group>
-        <ReCAPTCHA sitekey="Key" onChange={onChange} />
 
         <Button type="submit">Надіслати</Button>
       </Form>
