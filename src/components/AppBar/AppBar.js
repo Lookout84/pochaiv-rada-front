@@ -103,7 +103,7 @@ const AppBar = () => {
                 <NavDropdown.Item href="#action5">
                   Проєкти рішень виконкому
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action6">
+                <NavDropdown.Item href="/sessions">
                   Рішення сесій
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action7">

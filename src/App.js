@@ -15,6 +15,10 @@ const AppealPage = lazy(() =>
   import('./views/AppealPage' /* webpackChunkName: "appeal-page" */),
 );
 
+const SessionsPage = lazy(() =>
+  import('./views/SessionsPage' /* webpackChunkName: "sessions-page" */),
+);
+
 console.log(workers);
 
 const App = () => {
@@ -26,6 +30,7 @@ const App = () => {
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/appeal" element={<AppealPage />} />
+            <Route exact path="/sessions" element={<SessionsPage />} />
           </Routes>
         </Suspense>
         <ScrollArrow />
