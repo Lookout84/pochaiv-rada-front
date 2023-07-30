@@ -5,6 +5,7 @@ import s from './ArticlesList.module.css';
 
 const ArticlesList = ({ articles }) => (
   <ul className={s.articles_box}>
+    {' '}
     {articles.map(article => (
       <li key={article.id}>
         <Articles
@@ -14,9 +15,9 @@ const ArticlesList = ({ articles }) => (
           author={article.author}
           date={article.date}
           isFavorite={article.isFavorite}
-        />
+        />{' '}
       </li>
-    ))}
+    ))}{' '}
   </ul>
 );
 

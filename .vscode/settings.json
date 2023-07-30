@@ -1,5 +1,21 @@
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    }
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "prettier.eslintIntegration": true,
+  "prettier.cssEnable": ["scss", "css", "less", "scss"],
+  "prettier.graphqlEnable": ["graphql", "graphql"],
+  "prettier.javascriptEnable": [
+    "javascriptreact",
+    "javascript",
+    "javascriptreact"
+  ],
+  "prettier.jsonEnable": ["json", "json"],
+  "workbench.settings.useSplitJSON": false,
+  "json.format.enable": false,
+  "editor.defaultFormatter": "numso.prettier-standard-vscode",
+  "[json]": {
+    "editor.defaultFormatter": "numso.prettier-standard-vscode"
+  }
 }
