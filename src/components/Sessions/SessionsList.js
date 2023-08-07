@@ -9,14 +9,18 @@ const SessionList = ({ sessions }) => {
   };
 
   return (
-    <div className='container mt-4'>
+    <div className="container mt-4">
       <h2>Рішення сесій міської ради</h2>
-      <div className='row'>
+      <div className="row">
         {sessions.map(convocations => (
-          <Card style={{ width: '18rem'}} className='mr-4' key={convocations.convocation}>
+          <Card
+            style={{ width: '18rem' }}
+            className="ms-2 mb-2"
+            key={convocations.convocation}
+          >
             <Card.Body>
               <Card.Title>
-                <Card.Link href='#'>{convocations.convocation} </Card.Link>
+                <Card.Link href="#">{convocations.convocation} </Card.Link>
               </Card.Title>
             </Card.Body>
           </Card>

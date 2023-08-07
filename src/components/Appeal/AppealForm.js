@@ -7,7 +7,7 @@ const AppealForm = ({
   socialsStatus,
   requestTypes,
   directionSigns,
-  genders
+  genders,
 }) => {
   console.log(categories);
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const AppealForm = ({
     isHuman: false,
   });
 
-  function onChange (value) {
+  function onChange(value) {
     console.log('Captcha value:', value);
     setFormData(prevFormData => ({
       ...prevFormData,
@@ -62,64 +62,69 @@ const AppealForm = ({
     <section>
       <h1>Е-звернення</h1>
       <Form onSubmit={handleSubmit}>
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           Прізвище, ім'я та по-батькові:
           <Form.Control
-            type='text'
-            name='name'
+            type="text"
+            name="name"
             value={formData.name}
             onChange={handleChange}
           />
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           Стать:
           <Form.Select
-            aria-label='Default select example'
-            name='gender'
+            aria-label="Default select example"
+            name="gender"
             value={formData.category}
             onChange={handleChange}
-          >{genders.map(gender =>(<option key={gender.id} value={gender.value}>{gender.value}</option>))}
+          >
+            {genders.map(gender => (
+              <option key={gender.id} value={gender.value}>
+                {gender.value}
+              </option>
+            ))}
           </Form.Select>
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           Місце проживання:
           <Form.Control
-            type='text'
-            name='address'
+            type="text"
+            name="address"
             value={formData.address}
             onChange={handleChange}
-            placeholder='Індекс, область, населений пункт, вулиця, будинок, квартира'
+            placeholder="Індекс, область, населений пункт, вулиця, будинок, квартира"
           />
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           Телефон:
           <Form.Control
-            type='text'
-            name='phone'
+            type="text"
+            name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder='У форматі +380ХХХХХХХХХ'
+            placeholder="У форматі +380ХХХХХХХХХ"
           />
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           Електронна пошта:
           <Form.Control
-            type='text'
-            name='email'
+            type="text"
+            name="email"
             value={formData.email}
             onChange={handleChange}
           />
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           Категорія (вибрати одну з вказаних позицій):
           <Form.Select
-            aria-label='Default select example'
-            name='category'
+            aria-label="Default select example"
+            name="category"
             value={formData.category}
             onChange={handleChange}
           >
@@ -131,11 +136,11 @@ const AppealForm = ({
           </Form.Select>
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           Соціальний стан (вибрати одну з вказаних позицій):
           <Form.Select
-            aria-label='Default select example'
-            name='socialStatus'
+            aria-label="Default select example"
+            name="socialStatus"
             value={formData.socialStatus}
             onChange={handleChange}
           >
@@ -147,11 +152,11 @@ const AppealForm = ({
           </Form.Select>
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           Вид звернення (вибрати одну з вказаних позицій):
           <Form.Select
-            aria-label='Default select example'
-            name='requestType'
+            aria-label="Default select example"
+            name="requestType"
             value={formData.requestType}
             onChange={handleChange}
           >
@@ -163,11 +168,11 @@ const AppealForm = ({
           </Form.Select>
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           За ознакою направлення (вибрати одну з вказаних позицій):
           <Form.Select
-            aria-label='Default select example'
-            name='directionSign'
+            aria-label="Default select example"
+            name="directionSign"
             value={formData.directionSign}
             onChange={handleChange}
           >
@@ -179,45 +184,45 @@ const AppealForm = ({
           </Form.Select>
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           Дата направлення:
           <Form.Control
-            type='date'
-            name='date'
+            type="date"
+            name="date"
             value={formData.date}
             onChange={handleChange}
           />
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           Зміст звернення:
           <Form.Control
-            as='textarea'
-            aria-label='With textarea'
-            name='content'
+            as="textarea"
+            aria-label="With textarea"
+            name="content"
             value={formData.content}
             onChange={handleChange}
           />
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Я - не робот:</Form.Label>
-          <ReCAPTCHA sitekey='Key' onChange={onChange} />
+          <ReCAPTCHA sitekey="Key" onChange={onChange} />
         </Form.Group>
 
-        <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Check
             required
-            label='Я погоджуюсь на обробку персональних даних'
-            feedback='You must agree before submitting.'
-            feedbackType='invalid'
-            name='consent'
+            label="Я погоджуюсь на обробку персональних даних"
+            feedback="You must agree before submitting."
+            feedbackType="invalid"
+            name="consent"
             checked={formData.consent}
             onChange={handleChange}
           />
         </Form.Group>
 
-        <Button className='mb-3' type='submit'>
+        <Button className="mb-3" type="submit">
           Надіслати
         </Button>
       </Form>
