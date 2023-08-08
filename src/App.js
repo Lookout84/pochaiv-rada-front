@@ -19,6 +19,10 @@ const SessionsPage = lazy(() =>
   import('./views/SessionsPage' /* webpackChunkName: "sessions-page" */),
 );
 
+const DecisionsPage = lazy(() =>
+  import('./views/DecisionsPage' /* webpackChunkName: "decisions-page" */),
+);
+
 console.log(workers);
 
 const App = () => {
@@ -31,6 +35,7 @@ const App = () => {
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/appeal" element={<AppealPage />} />
             <Route exact path="/sessions" element={<SessionsPage />} />
+            <Route exact path="/sessions?filter=" element={<DecisionsPage />} />
           </Routes>
         </Suspense>
         <ScrollArrow />
