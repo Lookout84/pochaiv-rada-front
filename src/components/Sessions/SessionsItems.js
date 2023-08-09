@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
+import {Card, Button} from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 
 const SessionsItems = ({ sessions }) => {
@@ -22,18 +22,19 @@ const SessionsItems = ({ sessions }) => {
     <div className="container mt-4">
       <h2>Сесії {convocation} скликання</h2>
       <div className="row">
-        {uniqueNumbers.map(number => (
-          <Card style={{ width: '18rem' }} className="ms-2 mb-2" key={number}>
+        {uniqueNumbers.map(sessionNumber => (
+          <Card style={{ width: '18rem' }} className="ms-2 mb-2" key={sessionNumber}>
             <Card.Body>
               <Card.Title>
-                <Link to={`/sessions/${convocation}/${number}`}>
-                  {number} cесія
+                <Link to={`/sessions/${convocation}/${sessionNumber}`}>
+                  {sessionNumber} cесія
                 </Link>
               </Card.Title>
             </Card.Body>
           </Card>
         ))}
       </div>
+      <Button className='mb-2' onClick={() => window.history.back()}>Повернутися</Button>
     </div>
   );
 };

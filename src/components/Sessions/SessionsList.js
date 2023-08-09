@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
+import {Card, Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const SessionList = ({ sessions }) => {
@@ -23,6 +23,7 @@ const SessionList = ({ sessions }) => {
           </Card>
         ))}
       </div>
+      <Button className='mb-2' onClick={() => window.history.back()}>Повернутися</Button>
     </div>
   );
 };

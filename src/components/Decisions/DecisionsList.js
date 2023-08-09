@@ -1,24 +1,26 @@
 import React from 'react';
-import { Table, Container } from 'react-bootstrap';
+import { Table, Button, Container } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 
 const DecisionsList = ({ sessions }) => {
-  const { convocation, number } = useParams();
-  console.log(useParams);
+  const { convocation, session } = useParams();
 
   const selectedConvocationSessions = sessions.find(
     item => item.convocation === convocation,
   );
 
-  console.log(selectedConvocationSessions);
   const filteredSessions = selectedConvocationSessions
     ? selectedConvocationSessions.sessions
     : [];
 
+  const filteredBySession = filteredSessions.filter(
+      sessionItem => sessionItem.number === session
+    );
+
   return (
     <Container>
       <h2>
-        Рішення {number} сесій {convocation} скликання
+        Рішення {session} сесій {convocation} скликання
       </h2>
       <Table striped>
         <thead>
@@ -30,7 +32,7 @@ const DecisionsList = ({ sessions }) => {
           </tr>
         </thead>
         <tbody>
-          {filteredSessions.map(session => (
+          {filteredBySession.map(session => (
             <tr key={session.id}>
               <td>{session.decision}</td>
               <td>{session.name}</td>
@@ -42,6 +44,7 @@ const DecisionsList = ({ sessions }) => {
           ))}
         </tbody>
       </Table>
+      <Button className='mb-2' onClick={() => window.history.back()}>Повернутися</Button>
     </Container>
   );
 };
