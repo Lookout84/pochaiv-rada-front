@@ -1,13 +1,8 @@
-import React, { Link } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const SessionList = ({ sessions }) => {
-  // const [selectedSession, setSelectedSession] = useState(null);
-
-  // const handleSessionClick = session => {
-  //   setSelectedSession(session);
-  // };
-
   return (
     <div className="container mt-4">
       <h2>Рішення сесій міської ради</h2>
@@ -20,9 +15,9 @@ const SessionList = ({ sessions }) => {
           >
             <Card.Body>
               <Card.Title>
-                <Card.Link href="/sessions?=">
+                <Link to={`/sessions/${convocations.convocation}`}>
                   {convocations.convocation} скликання
-                </Card.Link>
+                </Link>
               </Card.Title>
             </Card.Body>
           </Card>

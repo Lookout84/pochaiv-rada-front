@@ -23,6 +23,12 @@ const DecisionsPage = lazy(() =>
   import('./views/DecisionsPage' /* webpackChunkName: "decisions-page" */),
 );
 
+const SessionsItemPage = lazy(() =>
+  import(
+    './views/SessionsItemPage' /* webpackChunkName: "sessionsItem-page" */
+  ),
+);
+
 console.log(workers);
 
 const App = () => {
@@ -35,7 +41,16 @@ const App = () => {
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/appeal" element={<AppealPage />} />
             <Route exact path="/sessions" element={<SessionsPage />} />
-            <Route exact path="/sessions?filter=" element={<DecisionsPage />} />
+            <Route
+              exact
+              path="/sessions/:convocation"
+              element={<SessionsItemPage />}
+            />
+            <Route
+              exact
+              path="/sessions/:convocation/:session"
+              element={<DecisionsPage />}
+            />
           </Routes>
         </Suspense>
         <ScrollArrow />

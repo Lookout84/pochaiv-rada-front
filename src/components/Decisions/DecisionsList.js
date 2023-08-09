@@ -1,18 +1,26 @@
 import React from 'react';
 import { Table, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const DecisionsList = ({ sessions }) => {
-  console.log(sessions);
+  const { convocation, number } = useParams();
+  console.log(useParams);
+
+  const selectedConvocationSessions = sessions.find(
+    item => item.convocation === convocation,
+  );
+
+  console.log(selectedConvocationSessions);
+  const filteredSessions = selectedConvocationSessions
+    ? selectedConvocationSessions.sessions
+    : [];
+
   return (
     <Container>
-      {/* {sessions.map(session => (
-        <div key={session.id}>
-          <h2>Рішення сесії {session.convocation} скликання міської ради</h2>
-        </div>
-      ))} */}
-
-      <Table striped="columns">
+      <h2>
+        Рішення {number} сесій {convocation} скликання
+      </h2>
+      <Table striped>
         <thead>
           <tr>
             <th>№ рішення</th>
@@ -22,13 +30,13 @@ const DecisionsList = ({ sessions }) => {
           </tr>
         </thead>
         <tbody>
-          {sessions.map(session => (
+          {filteredSessions.map(session => (
             <tr key={session.id}>
-              <td>{session.number}</td>
+              <td>{session.decision}</td>
               <td>{session.name}</td>
               <td>{session.date}</td>
               <td>
-                <Link href={session.pdfLink}>PDF файл</Link>
+                <Link to={session.pdfLink}>PDF файл</Link>
               </td>
             </tr>
           ))}
