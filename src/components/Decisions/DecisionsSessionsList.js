@@ -14,13 +14,13 @@ const DecisionsList = ({ sessions }) => {
     : [];
 
   const filteredBySession = filteredSessions.filter(
-      sessionItem => sessionItem.number === session
-    );
+    sessionItem => sessionItem.number === session,
+  );
 
   return (
     <Container>
       <h2>
-        Рішення {session} сесій {convocation} скликання
+        Рішення {session} сесії {convocation} скликання
       </h2>
       <Table striped>
         <thead>
@@ -44,7 +44,9 @@ const DecisionsList = ({ sessions }) => {
           ))}
         </tbody>
       </Table>
-      <Button className='mb-2' onClick={() => window.history.back()}>Повернутися</Button>
+      <Button className="mb-2" onClick={() => window.history.back()}>
+        Повернутися
+      </Button>
     </Container>
   );
 };

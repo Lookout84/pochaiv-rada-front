@@ -2,22 +2,20 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const SessionList = ({ sessions }) => {
+const ExecutivesList = ({ executives }) => {
   return (
     <div className="container mt-4">
-      <h2>Рішення сесій міської ради</h2>
+      <h2>Рішення виконавчого комітету міської ради</h2>
       <div className="row">
-        {sessions.map(convocations => (
+        {executives.map(years => (
           <Card
             style={{ width: '18rem' }}
             className="ms-2 mb-2"
-            key={convocations.convocation}
+            key={years.year}
           >
             <Card.Body>
               <Card.Title>
-                <Link to={`/sessions/${convocations.convocation}`}>
-                  {convocations.convocation} скликання
-                </Link>
+                <Link to={`/executives/${years.year}`}>{years.year}</Link>
               </Card.Title>
             </Card.Body>
           </Card>
@@ -30,4 +28,4 @@ const SessionList = ({ sessions }) => {
   );
 };
 
-export default SessionList;
+export default ExecutivesList;

@@ -106,7 +106,7 @@ const AppBar = () => {
                 <NavDropdown.Item href="/sessions">
                   Рішення сесій
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action7">
+                <NavDropdown.Item href="/executives">
                   Рішення виконкому
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action9">
@@ -141,7 +141,7 @@ const AppBar = () => {
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Е-демократія" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Е-петиція</NavDropdown.Item>
+                <NavDropdown.Item href="/petition">Е-петиція</NavDropdown.Item>
                 <NavDropdown.Item href="/appeal">Е-звернення</NavDropdown.Item>
                 <NavDropdown.Item href="#action5">
                   Е-консультація
